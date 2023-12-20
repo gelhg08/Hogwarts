@@ -44,8 +44,8 @@ body {
     text-align: center;
     text-decoration: none;
     font-size: 350%;
-    font-family: 'Cinzel Decorative', serif;
-font-family: 'UnifrakturMaguntia', cursive;
+    /* font-family: 'Cinzel Decorative', serif; */
+    font-family: 'UnifrakturMaguntia', cursive;
 }
 
 
@@ -73,10 +73,16 @@ font-family: 'UnifrakturMaguntia', cursive;
 .formulario1 {
     background-color: transparent;
     border-radius: 5px;
-    height: 20%;
+    height: 40px;
     border: solid  1px white;
+    color: white;
+    width: 200px;
 
- }
+  }
+
+.color {
+  color: white;
+}
 
 
 

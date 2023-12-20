@@ -1,7 +1,8 @@
 let estudianteHogwarts={
     nombre: "",
     edad: "",
-    familia: "",
+    padre: "",
+    madre:"",
     linaje: "",
     casa:"",
     animalPatronus:"",
@@ -21,8 +22,38 @@ let estudianteHogwarts={
     }
 };
 
-function calcular(estudianteHogwarts) { 
-estudianteHogwarts.nombre = document.getElementById("nombreEstudiante").textContent
+const botonEviar = document.getElementById("boton");
+
+botonEviar.addEventListener("click", (event) => {
+    event.preventDefault();
+    calcular()
+})
+
+function calcular() { 
+    const nombre = document.getElementById("nombreEstudiante").value
+    const edad = document.getElementById("edadEstudiante").value
+    const padre = document.getElementById("padreEstudiante").value
+    const madre = document.getElementById("madreEstudiante").value
+    const linaje = document.getElementById("linaje").value
+    const cualidades = document.getElementById("cualidades").value
+
+    estudianteHogwarts.nombre = nombre;
+    estudianteHogwarts.edad = edad;
+    estudianteHogwarts.padre = padre;
+    estudianteHogwarts.madre = madre;
+    estudianteHogwarts.linaje = linaje;
+    estudianteHogwarts.cualidades = cualidades;
+
+    let colocar = document.getElementById("colocar")
+    colocar.innerHTML = `<p class="color"> Estudiante registrado </p>
+    <p class="color"> Nombre: ${nombre} </p>
+    <p class="color"> Edad: ${edad}  </p>
+    <p class="color"> Madre: ${madre} </p>
+    <p class="color"> Padre: ${padre} </p> 
+    <p class="color"> Linaje: ${linaje} </p>
+    <p class="color"> Patronus: ${estudianteHogwarts.animalPatronus} </p>
+    ` 
+    
     
 }
 
@@ -100,12 +131,16 @@ let defensaContraLasArtesOscuras = {
 
 
 estudianteHogwarts.enfrentarDementor();
-console.log("Animal del expecto Patronum: ", estudianteHogwarts.animalPatronus)
+// console.log("Animal del expecto Patronum: ", estudianteHogwarts.animalPatronus)
 
-console.log("Información completa del estudiante:");
-console.log(`Nombre: ${estudianteHogwarts.nombre}`);
-console.log(`Edad: ${estudianteHogwarts.edad}`);
-console.log(`Linaje: ${estudianteHogwarts.linaje}`);
-console.log(`Casa: ${estudianteHogwarts.casa}`);
-console.log("Animal del Expecto Patronum:", estudianteHogwarts.animalPatronus);
-console.log("Cualidades:", estudianteHogwarts.cualidades.join(", "));
+// console.log("Información completa del estudiante:");
+// console.log(`Nombre: ${estudianteHogwarts.nombre}`);
+// console.log(`Edad: ${estudianteHogwarts.edad}`);
+// console.log(`Linaje: ${estudianteHogwarts.linaje}`);
+// console.log(`Casa: ${estudianteHogwarts.casa}`);
+// console.log("Animal del Expecto Patronum:", estudianteHogwarts.animalPatronus);
+// console.log("Cualidades:", estudianteHogwarts.cualidades.join(", "));
+
+
+
+
